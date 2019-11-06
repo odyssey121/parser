@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>simple_parser</title>
+    <link href="{{url_for('static' , filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static' , filename = 'css/css.css')}}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <div class='container'>
+        <h1>Edit Article</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.site_name.label }}<br>
+                {{ form.site_name(size=32) }}<br>
+                {% for error in form.site_name.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.container_tag.label }}<br>
+                {{ form.container_tag(size=32) }}<br>
+                {% for error in form.container_tag.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.container_class.label }}<br>
+                {{ form.container_class(size=32) }}<br>
+                {% for error in form.container_class.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+
+        <div />
+</body>
+
+</html>
