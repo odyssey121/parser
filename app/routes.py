@@ -9,5 +9,5 @@ def index():
         flash('Site name {}, container tag {}'.format(
             form.site_name.data, form.container_tag.data))
         return redirect('/')
-    return render_template('index.html', form=form)
+    return render_template('index.html', token='test')
 
