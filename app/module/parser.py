@@ -9,21 +9,6 @@ BASE_CONTAINER_PARAMS = {
     'pages': {'tag': 'div', 'class': 'nav-links'}
 }
 
-HTML = '''
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-'''
 
 
 def askYesNo(question):
@@ -82,7 +67,7 @@ def getParams():
 
     return {
         'urlForParse': 'https://pasmi.ru/cat/news',
-        'pageCount': 20,
+        'pageCount': 10,
         'pageParam': PAGE_PARAMS[1],
         'containerParam': BASE_CONTAINER_PARAMS,
     }

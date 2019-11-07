@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "static/react/css/css/main.b100e6da.chunk.css",
-    "main.js": "static/react/css/js/main.5a36e110.chunk.js",
-    "main.js.map": "static/react/css/js/main.5a36e110.chunk.js.map",
+    "main.css": "static/react/css/css/main.57ed5257.chunk.css",
+    "main.js": "static/react/css/js/main.fdf342b6.chunk.js",
+    "main.js.map": "static/react/css/js/main.fdf342b6.chunk.js.map",
     "runtime-main.js": "static/react/css/js/runtime-main.8707430d.js",
     "runtime-main.js.map": "static/react/css/js/runtime-main.8707430d.js.map",
-    "css/js/2.2c4adcce.chunk.js": "static/react/css/js/2.2c4adcce.chunk.js",
-    "css/js/2.2c4adcce.chunk.js.map": "static/react/css/js/2.2c4adcce.chunk.js.map",
+    "css/css/2.7ececfe9.chunk.css": "static/react/css/css/2.7ececfe9.chunk.css",
+    "css/js/2.c5813718.chunk.js": "static/react/css/js/2.c5813718.chunk.js",
+    "css/js/2.c5813718.chunk.js.map": "static/react/css/js/2.c5813718.chunk.js.map",
     "../../templates/index.html": "static/react/../../templates/index.html",
-    "css/css/main.b100e6da.chunk.css.map": "static/react/css/css/main.b100e6da.chunk.css.map",
-    "css/media/logo.svg": "static/react/css/media/logo.25bf045c.svg",
-    "precache-manifest.6d259da1b5892db154e5d3eeaf004e38.js": "static/react/precache-manifest.6d259da1b5892db154e5d3eeaf004e38.js",
+    "css/css/2.7ececfe9.chunk.css.map": "static/react/css/css/2.7ececfe9.chunk.css.map",
+    "css/css/main.57ed5257.chunk.css.map": "static/react/css/css/main.57ed5257.chunk.css.map",
+    "precache-manifest.551f46520e9b2e6fb6c30643e095a1b8.js": "static/react/precache-manifest.551f46520e9b2e6fb6c30643e095a1b8.js",
     "service-worker.js": "static/react/service-worker.js"
   },
   "entrypoints": [
     "css/js/runtime-main.8707430d.js",
-    "css/js/2.2c4adcce.chunk.js",
-    "css/css/main.b100e6da.chunk.css",
-    "css/js/main.5a36e110.chunk.js"
+    "css/css/2.7ececfe9.chunk.css",
+    "css/js/2.c5813718.chunk.js",
+    "css/css/main.57ed5257.chunk.css",
+    "css/js/main.fdf342b6.chunk.js"
   ]
 }
