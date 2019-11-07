@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ResultTable from "./components/Table";
 import { Form, Input, Button, Select, InputNumber } from "antd";
 import "./App.css";
@@ -19,10 +19,6 @@ const config = (initialValue, required) => ({
 });
 
 function App({ form }) {
-  useEffect(() => {
-    console.log(result);
-    console.log(loading);
-  });
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState([]);
