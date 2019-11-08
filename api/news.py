@@ -1,6 +1,6 @@
 
 from flask import jsonify, g, request
-from app.modules.parser import Parser
+from modules.parser import Parser
 from . import api
 from . errors import bad_request, not_found
 
