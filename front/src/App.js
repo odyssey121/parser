@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ResultTable from "./components/Table";
 import { Form, Input, Button, Select, InputNumber } from "antd";
 import "./App.css";
@@ -19,23 +19,37 @@ const config = (initialValue, required) => ({
 });
 
 function App({ form }) {
+  useEffect(() => {
+    if (loading === true) {
+      setResult([]);
+      setErrors(null);
+    }
+  }, loading);
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState([]);
+  const [errors, setErrors] = useState(null);
 
-  const getData = async () => {
+  const getData = async values => {
     setLoading(true);
-    const dataJson = await fetch("/api/news").then(response => response.json());
+    const rawResponse = await fetch("/api/news", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(values)
+    });
+    const content = await rawResponse.json();
     setLoading(false);
-    setResult(dataJson);
+    Array.isArray(content) ? setResult(content) : setErrors(content);
   };
 
   const onSubmit = e => {
     e.preventDefault();
     form.validateFields((err, values) => {
       if (!err) {
-        getData();
-        console.log(values);
+        getData(values);
       }
     });
   };
@@ -43,14 +57,18 @@ function App({ form }) {
   return (
     <div className="App">
       <header className="App-header">
-        <Form className="Main-form">
+        <Form className="Main-form" onSubmit={onSubmit}>
           <div>
             <span className="label">
               Сайт/Блог для парсинга
               <br />
               вконце без слеша
             </span>
-            <Form.Item onSubmit={onSubmit}>
+            <Form.Item
+              hasFeedback
+              validateStatus={errors && "error"}
+              help={errors && errors}
+            >
               {form.getFieldDecorator(
                 "site",
                 config("https://pasmi.ru/cat/news", true)
@@ -167,6 +185,11 @@ function App({ form }) {
             </Form.Item>
           </div>
           <div>
+            <Button type="danger" id="clear" onClick={() => setResult([])}>
+              Очисть результаты
+            </Button>
+          </div>
+          <div>
             <Button onClick={onSubmit} type="primary">
               Попробывать (парсинг)
             </Button>
@@ -174,9 +197,6 @@ function App({ form }) {
         </Form>
       </header>
       <ResultTable result={result} loading={loading} />
-      <Button type="danger" id="clear" onClick={() => setResult([])}>
-        Очисть результаты
-      </Button>
     </div>
   );
 }
