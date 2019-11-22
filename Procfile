@@ -1,2 +1,2 @@
-web: gunicorn app:app && python cron.py
-cron: python cron.py
+web: gunicorn app:app
+run: python cron.py
