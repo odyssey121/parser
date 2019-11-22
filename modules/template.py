@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from config import connParam
+from modules.config import connParam
 from psycopg2 import sql, connect, errors
 from psycopg2.extras import DictCursor
 
