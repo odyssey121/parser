@@ -5,7 +5,7 @@ from modules.siteAdapter import RssParser
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job('interval', minutes=4)
+@sched.scheduled_job('interval', minutes=10)
 def startSiteAdapter():
     print('tests')
     siteAdapter = RssParser()
