@@ -19,16 +19,13 @@ const config = (initialValue, required) => ({
 });
 
 function App({ form }) {
-  useEffect(() => {
-    if (loading === true) {
-      setResult([]);
-      setErrors(null);
-    }
-  }, loading);
+  
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState([]);
   const [errors, setErrors] = useState(null);
+
+  
 
   const getData = async values => {
     setLoading(true);
@@ -53,6 +50,13 @@ function App({ form }) {
       }
     });
   };
+
+  useEffect(() => {
+    if (loading === true) {
+      setResult([]);
+      setErrors(null);
+    }
+  }, loading);
 
   return (
     <div className="App">
