@@ -1,7 +1,7 @@
 import os.path
 import sys
-from sourceParser.findFeed import findFeed
-from template import Driver
+from modules import findFeed
+from modules.template import Driver
 import datetime
 import lxml.html
 from dateutil import parser as dp
