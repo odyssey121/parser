@@ -1,1 +1,1 @@
-run: python cron.py
+web: gunicorn app:app
