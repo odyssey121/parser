@@ -53,7 +53,7 @@ pycountry==18.2.23
 pygal==2.4.0
 pygal-maps-world==1.0.2
 pygame==1.9.4
-Pygments==2.3.1
+Pygments==2.7.4
 PyJWT==1.6.4
 pylint==2.3.0
 pyparsing==2.2.0
